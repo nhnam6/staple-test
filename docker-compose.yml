@@ -24,17 +24,31 @@ services:
     image: docker.elastic.co/kibana/kibana:${ES_STACK_VERSION}
     restart: always
     environment:
-      - SERVERNAME=kibana
-      - ELASTICSEARCH_HOSTS=http://es:9200 # address of elasticsearch docker container which kibana will connect
-      - ELASTICSEARCH_USERNAME=kibana_system
-      - ELASTICSEARCH_PASSWORD=${KIBANA_PASSWORD}
+      SERVERNAME: kibana
+      ELASTICSEARCH_HOSTS: http://es:9200 # address of elasticsearch docker container which kibana will connect
+      ELASTICSEARCH_USERNAME: kibana_system
+      ELASTICSEARCH_PASSWORD: ${KIBANA_PASSWORD}
     ports:
       - 5601:5601
     depends_on:
       - es # kibana will start when elasticsearch has started
     volumes:
-     - kibanadata:/usr/share/kibana/data
+      - kibanadata:/usr/share/kibana/data
 
+  salary_survey_server:
+    build:
+      context: salary_api
+      dockerfile: Dockerfile
+    ports:
+      - 5001:5000
+    environment:
+      FLASK_APP: main.py
+      FLASK_ENV: development
+      FLASK_DEBUG: 1
+      ELASTICSEARCH_URL: ${ELASTICSEARCH_URL}
+    command: pipenv run runserver
+    depends_on:
+      - es
 volumes:
   elasticsearchdata:
   kibanadata:

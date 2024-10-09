@@ -10,6 +10,7 @@ elasticsearch = "==8.15.1"
 graphql-server = "==3.0.0b7"
 click = "==8.1.7"
 pandas = "==2.2.3"
+numpy = "==2.1.2"
 
 [dev-packages]
 black = "==23.7.0"
@@ -21,8 +22,9 @@ factory-boy = "==3.3.0"
 coverage = "==7.2.7"
 
 [requires]
-python_version = "3.12"
+python_version = "3.11"
 
 [scripts]
 setup = "pipenv sync"
 setup_dev = "pipenv sync --dev"
+runserver = "flask run --host=0.0.0.0"
