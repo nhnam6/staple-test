@@ -60,7 +60,6 @@ class SalarySurveyQuery(graphene.ObjectType):
             es_client=es_client,
             index_name=Config.ELASTICSEARCH_SALARY_INDEX,
             doc_id=id,
-            fields=fields,
         )
         if data:
             return SalarySurvey(**data[0])

@@ -1,0 +1,43 @@
+{
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  // salary_api
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "python.defaultInterpreterPath": "${workspaceFolder}/salary_api/.venv/bin/python",
+  "python.envFile": "${workspaceFolder}/.env",
+  "isort.args": [
+    "--profile",
+    "black",
+    "--settings-file",
+    "${workspaceFolder}/salary_api/setup.cfg"
+  ],
+  "flake8.cwd": "${workspaceFolder}/salary_api",
+  "isort.check": false,
+  "python.testing.cwd": "${workspaceFolder}/salary_api",
+  "python.testing.unittestEnabled": true,
+  "python.analysis.extraPaths": ["salary_api"],
+  "pylint.args": ["--disable=C0114", "--disable=C0115", "--disable=C0116"],
+  "files.exclude": {
+    "**/__pycache__": true
+  },
+  "cSpell.words": [
+    "astype",
+    "bootcamp",
+    "citystatecountry",
+    "dataframe",
+    "dropna",
+    "fillna",
+    "graphene",
+    "Graphi",
+    "graphiql",
+    "heplers",
+    "jsonify"
+  ]
+}
