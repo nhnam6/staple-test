@@ -1,5 +1,7 @@
 # Exercise - A
 
+URL: http://127.0.0.1:5601/app/dev_tools#/console
+
 ## Query 1
 
 ```
