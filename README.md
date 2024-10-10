@@ -1,5 +1,34 @@
 # Staple Test
 
+## Approach
+
+Here's an explanation of the approach to implementing a project that uses technologies like Flask for the API, Elasticsearch for search capabilities, Docker and Docker Compose for containerization, unit testing, ETL data processing, and designing Elasticsearch index templates.
+
+### API Implementation with Flask
+
+1. Flask as the Web Framework: Flask is a lightweight and flexible Python web framework. It is well-suited for building RESTful APIs because of its simplicity and modularity.
+2. GraphQL and REST Endpoints: The API is designed to support both GraphQL and RESTful access patterns, allowing users to choose between flexible queries with GraphQL and traditional REST endpoints.
+3. API Structure: The Flask application is structured in a modular way, with separate directories for GraphQL queries, REST routes, service logic, and CLI commands. This separation of concerns improves maintainability and readability.
+
+### Data Storage and Search with Elasticsearch
+
+1. Elasticsearch as the Primary Data Store: Elasticsearch is used for storing and querying data due to its powerful full-text search capabilities and support for aggregations. It allows the API to perform efficient searches, aggregations, and filtering of large datasets.
+2. Index Design and Template: The index mapping is carefully designed, choosing appropriate data types for each field. For example:
+   Text fields are indexed as text with keyword sub-fields for exact matches.
+   Numeric fields (e.g., salaries) use types like float for precision.
+   Nested fields are used for complex data structures, such as historical salary data.
+3. Index Templates: Index templates are created to define index settings and mappings. This ensures that new indices created in the future automatically follow the predefined structure, making data consistent across indices.
+
+### Containerization with Docker and Orchestration with Docker Compose
+
+1. Dockerizing the Application: Each component of the application, including the Flask API, Elasticsearch, and Kibana, is containerized using Docker. This ensures that the application can run consistently across different environments.
+2. Using Docker Compose for Multi-Service Management: Docker Compose is used to orchestrate multiple containers, such as the Flask API, Elasticsearch, and Kibana, making it easy to set up and manage the development environment.
+
+### ETL Data Processing
+
+1. Extract, Transform, Load (ETL) Pipeline: An ETL pipeline is used to load data from various sources (e.g., CSV files) into Elasticsearch. The data is cleaned and transformed before being indexed.
+2. Automating Data Loading with CLI Commands: CLI commands are created to automate the process of loading salary survey data into Elasticsearch. This helps ensure that data is consistently processed and indexed.
+
 ## Overview
 
 Provide a brief description of what the project does and the problem it solves.
