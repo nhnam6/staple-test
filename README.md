@@ -77,6 +77,12 @@ salary_survey_server-1  | 2024-10-09 19:13:16,406 - WARNING - werkzeug -  * Debu
 salary_survey_server-1  | 2024-10-09 19:13:16,409 - INFO - werkzeug -  * Debugger PIN: 732-871-805`
 ```
 
+5. Healthcheck API
+
+```
+GET http://127.0.0.1:5001/health
+```
+
 ## Exercise
 
 1. Exercise A: https://github.com/nhnam6/staple-test/blob/main/docs/Exercise-A/README.md
