@@ -38,6 +38,8 @@
     "Graphi",
     "graphiql",
     "heplers",
-    "jsonify"
+    "jsonify",
+    "Pipfile",
+    "pyproject"
   ]
 }

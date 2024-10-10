@@ -241,3 +241,41 @@ TOTAL                                                    684    132    81%
 
 ============================================================================================= 27 passed in 4.94s =============================================================================================
 ```
+
+## Project Directory Tree
+
+```graphql
+staple-test/
+├── .vscode/                 # VSCode settings and configurations for the project environment
+├── docs/                    # Documentation files for the project
+├── salary_api/              # Main directory for the Salary API application
+│   ├── api/
+│   │   ├── graph/
+│   │   │   └── queries/     # GraphQL queries
+│   │   └── rest/            # REST API endpoints
+│   ├── cli/
+│   │   ├── elasticsearch_cmd.py  # CLI commands for Elasticsearch operations
+│   │   └── load_salary_survey_cmd.py  # CLI command to load salary survey data
+│   ├── data/                # Data files or resources used by the application
+│   ├── infra/
+│   │   └── es_client.py     # Elasticsearch client configuration
+│   ├── logger/              # Logging configuration and setup
+│   ├── service/
+│   │   ├── search/          # Search services, possibly wrapping Elasticsearch queries
+│   │   └── data_transformation/  # Services for data transformation tasks
+│   ├── tests/               # Test suite for the application
+│   ├── .dockerignore        # Specifies files to ignore in Docker builds
+│   ├── .python-version      # Specifies Python version managed by pyenv
+│   ├── app.py               # Flask application initialization
+│   ├── main.py              # Main entry point for the Flask application
+│   ├── config.py            # Configuration settings for the application
+│   ├── Dockerfile           # Dockerfile for building the application container
+│   ├── Pipfile              # Pipenv file for managing dependencies
+│   ├── Pipfile.lock         # Lock file to ensure reproducible builds
+│   ├── pyproject.yaml       # Python project settings including build system configuration
+│   ├── README.md            # Project README with setup instructions and general info
+│   └── setup-cfg            # Setup configuration for tooling and packaging
+├── .gitignore               # Specifies intentionally untracked files to ignore
+├── .sample.env              # Sample environment configuration file
+└── docker-compose.yml       # Docker Compose configuration to orchestrate containers
+```
