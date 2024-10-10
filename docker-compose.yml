@@ -35,7 +35,7 @@ services:
     volumes:
       - kibanadata:/usr/share/kibana/data
 
-  salary_survey_server:
+  salary-survey-server:
     build:
       context: salary_api
       dockerfile: Dockerfile

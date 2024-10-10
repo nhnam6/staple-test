@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complete Document Mapping for Salary Survey Index</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #dddddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Complete Document Mapping for Salary Survey Index</h1>
+    <h2>Index Name: salary-survey-index-202410</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Employment Details -->
+        <tr>
+          <td>employment_details.company_name</td>
+          <td>Text</td>
+          <td>
+            Company name where the employee works, allows full-text search.
+          </td>
+        </tr>
+        <tr>
+          <td>employment_details.company_size</td>
+          <td>Integer Range</td>
+          <td>Range of company size to represent the number of employees.</td>
+        </tr>
+        <tr>
+          <td>employment_details.employment_type</td>
+          <td>Keyword</td>
+          <td>Type of employment, e.g., full-time, part-time.</td>
+        </tr>
+        <tr>
+          <td>employment_details.industry</td>
+          <td>Text</td>
+          <td>Industry sector of employment.</td>
+        </tr>
+        <tr>
+          <td>employment_details.location_city</td>
+          <td>Keyword</td>
+          <td>City where the employee works.</td>
+        </tr>
+        <tr>
+          <td>employment_details.location_country</td>
+          <td>Keyword</td>
+          <td>Country where the employee works.</td>
+        </tr>
+        <tr>
+          <td>employment_details.public_private</td>
+          <td>Keyword</td>
+          <td>Whether the company is public or private.</td>
+        </tr>
+
+        <!-- Job Details -->
+        <tr>
+          <td>job_details.job_title</td>
+          <td>Text</td>
+          <td>Job title of the employee.</td>
+        </tr>
+        <tr>
+          <td>job_details.level</td>
+          <td>Keyword</td>
+          <td>Level of the job position.</td>
+        </tr>
+        <tr>
+          <td>job_details.required_hours_per_week</td>
+          <td>Integer Range</td>
+          <td>Required working hours per week.</td>
+        </tr>
+
+        <!-- Personal Details -->
+        <tr>
+          <td>personal_details.age</td>
+          <td>Integer</td>
+          <td>Age of the employee.</td>
+        </tr>
+        <tr>
+          <td>personal_details.gender</td>
+          <td>Keyword</td>
+          <td>Gender of the employee.</td>
+        </tr>
+        <tr>
+          <td>personal_details.education_level</td>
+          <td>Keyword</td>
+          <td>Education level of the employee.</td>
+        </tr>
+
+        <!-- Salary Details -->
+        <tr>
+          <td>salary_details.annual_salary</td>
+          <td>Float</td>
+          <td>Annual salary of the employee.</td>
+        </tr>
+        <tr>
+          <td>salary_details.currency</td>
+          <td>Keyword</td>
+          <td>Currency of the salary payments.</td>
+        </tr>
+        <tr>
+          <td>salary_details.base_salary_by_year</td>
+          <td>Nested</td>
+          <td>Historical data of base salary changes by year.</td>
+        </tr>
+        <tr>
+          <td>salary_details.bonus</td>
+          <td>Float</td>
+          <td>Bonus amount received by the employee.</td>
+        </tr>
+        <tr>
+          <td>salary_details.stock_options</td>
+          <td>Float</td>
+          <td>Stock options granted to the employee.</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

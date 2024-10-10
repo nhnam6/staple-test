@@ -63,7 +63,7 @@ http://localhost:5601
 ### Create index
 
 ```
-flask elasticsearch create-index
+pipenv run flask elasticsearch create-index
 ```
 
 Example output:
@@ -86,7 +86,7 @@ Example output:
 ### Run Flask app
 
 ```
-flask --app main --debug run
+pipenv run flask --app main --debug run
 ```
 
 Example output
@@ -110,17 +110,17 @@ Example output
 1. Load salary survey data (salary_survey-1.csv)
 
 ```
-flask load-salary survey-1 data/salary_survey-1.csv
+pipenv run flask load-salary survey-1 data/salary_survey-1.csv
 ```
 
 2. Load salary survey data (salary_survey-2.cs)
 
 ```
-flask load-salary survey-2 data/salary_survey-2.csv
+pipenv run flask load-salary survey-2 data/salary_survey-2.csv
 ```
 
 3. Load salary survey data (salary_survey-3.csv)
 
 ```
-flask load-salary survey-3 data/salary_survey-3.csv
+pipenv run flask load-salary survey-3 data/salary_survey-3.csv
 ```
