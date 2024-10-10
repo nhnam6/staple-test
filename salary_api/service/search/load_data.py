@@ -10,17 +10,6 @@ from elasticsearch.helpers import (
 from logger.logger import logger
 
 
-def prepare_data_for_indexing(df: pd.DataFrame) -> pd.DataFrame:
-    df["age_group"] = df.apply(
-        lambda x: {"gte": x["min_age"], "lte": x["max_age"]}, axis=1
-    )
-    df["work_experience"] = df.apply(
-        lambda x: {"gte": x["min_years"], "lte": x["max_years"]}, axis=1
-    )
-    df = df.drop(columns=["min_age", "max_age", "min_years", "max_years"])
-    return df
-
-
 def index_data_to_elasticsearch(
     es_client: Elasticsearch,
     data: list[dict],

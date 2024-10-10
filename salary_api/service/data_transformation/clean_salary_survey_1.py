@@ -1,5 +1,3 @@
-import re
-
 import pandas as pd
 
 from service.data_transformation.heplers import (

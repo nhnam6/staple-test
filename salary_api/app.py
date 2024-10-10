@@ -1,14 +1,13 @@
-from cmd.elasticsearch_cmd import register_commands as register_es_commands
-from cmd.load_salary_survey_cmd import (
-    register_commands as register_load_salary_commands,
-)
-
 import graphene
 from flask import Flask
 from graphql_server.flask import GraphQLView
 
 from api.graph.queries.query import Query
 from api.rest.healthcheck.routes import health as health_routes
+from cli.elasticsearch_cmd import register_commands as register_es_commands
+from cli.load_salary_survey_cmd import (
+    register_commands as register_load_salary_commands,
+)
 from logger.logger import logger
 
 

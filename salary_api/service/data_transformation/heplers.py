@@ -24,6 +24,9 @@ def parse_salary(salary_str) -> float:
 
 
 def split_range(range_str):
+    if not range_str:
+        # Return (0, 0) if the input is None or an empty string
+        return 0, 0
     try:
         min_age, max_age = map(int, range_str.split("-"))
         return min_age, max_age
@@ -32,6 +35,10 @@ def split_range(range_str):
 
 
 def split_work_experience(exp_str):
+    if not exp_str:
+        # Return (0, 0) if the input is None or an empty string
+        return 0, 0
+
     # Use regex to find all numbers in the string
     numbers = re.findall(r"\d+", exp_str)
 
