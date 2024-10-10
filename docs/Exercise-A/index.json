@@ -1,0 +1,180 @@
+{
+    "salary-survey-index-202410": {
+      "aliases": {},
+      "mappings": {
+        "properties": {
+          "employment_details": {
+            "properties": {
+              "company_name": {
+                "type": "text"
+              },
+              "company_size": {
+                "type": "integer_range"
+              },
+              "employment_type": {
+                "type": "keyword"
+              },
+              "industry": {
+                "type": "text"
+              },
+              "location_city": {
+                "type": "keyword"
+              },
+              "location_country": {
+                "type": "keyword"
+              },
+              "public_private": {
+                "type": "text"
+              }
+            }
+          },
+          "job_details": {
+            "properties": {
+              "actual_hours_per_week": {
+                "type": "integer_range"
+              },
+              "additional_context": {
+                "type": "text"
+              },
+              "industry": {
+                "type": "keyword"
+              },
+              "ladder": {
+                "type": "text"
+              },
+              "level": {
+                "type": "integer"
+              },
+              "required_hours_per_week": {
+                "type": "integer_range"
+              },
+              "title": {
+                "type": "text"
+              }
+            }
+          },
+          "personal_details": {
+            "properties": {
+              "age_group": {
+                "type": "integer_range"
+              },
+              "annual_vacation_weeks": {
+                "type": "integer"
+              },
+              "bootcamp_experience": {
+                "type": "text"
+              },
+              "education": {
+                "type": "text"
+              },
+              "gender": {
+                "type": "keyword"
+              },
+              "happiness": {
+                "type": "text"
+              },
+              "health_insurance": {
+                "type": "keyword"
+              },
+              "industry_thoughts": {
+                "type": "text"
+              },
+              "location": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "registration_plan": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword",
+                    "ignore_above": 256
+                  }
+                }
+              },
+              "resignation_plan": {
+                "type": "text"
+              },
+              "top_skills": {
+                "type": "text"
+              },
+              "work_experience": {
+                "type": "integer_range"
+              }
+            }
+          },
+          "salary_details": {
+            "properties": {
+              "annual_salary": {
+                "type": "float"
+              },
+              "base_salary_by_year": {
+                "type": "nested",
+                "properties": {
+                  "salary": {
+                    "type": "float"
+                  },
+                  "year": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "bonus_by_year": {
+                "type": "nested",
+                "properties": {
+                  "salary": {
+                    "type": "float"
+                  },
+                  "year": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "currency_salary": {
+                "type": "keyword"
+              },
+              "stock_options": {
+                "type": "float"
+              }
+            }
+          },
+          "timestamp": {
+            "type": "date"
+          },
+          "work_experience_details": {
+            "properties": {
+              "years_in_current_company": {
+                "type": "integer_range"
+              },
+              "years_in_industry": {
+                "type": "integer_range"
+              }
+            }
+          }
+        }
+      },
+      "settings": {
+        "index": {
+          "routing": {
+            "allocation": {
+              "include": {
+                "_tier_preference": "data_content"
+              }
+            }
+          },
+          "number_of_shards": "1",
+          "provided_name": "salary-survey-index-202410",
+          "creation_date": "1728503298814",
+          "number_of_replicas": "0",
+          "uuid": "hYs7lwJhRPKt6ElVYBsTXQ",
+          "version": {
+            "created": "8070199"
+          }
+        }
+      }
+    }
+  }

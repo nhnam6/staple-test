@@ -20,7 +20,7 @@ def create_template(es: Elasticsearch, template_name: str, indexes: list[str]):
                         "company_name": {"type": "text"},
                         "company_size": {"type": "integer_range"},
                         "location_country": {"type": "keyword"},
-                        "location_city": {"type": "text"},
+                        "location_city": {"type": "keyword"},
                         "industry": {"type": "text"},
                         "public_private": {"type": "text"},
                     }
